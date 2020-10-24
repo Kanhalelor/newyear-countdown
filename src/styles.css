@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+html {
+  background-image: url(https://cdn.pixabay.com/photo/2020/01/20/18/23/flower-4781005_960_720.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  background-color: #eee;
+}
+body {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Staatliches", cursive;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+.countdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.countdown > div {
+  position: relative;
+  width: 100px;
+  background-image: linear-gradient(145deg, #97d6f3, #2bd6d6, #f8f8f898);
+  padding: 0.4em;
+}
+.countdown > div:not(last-child) {
+  margin-right: 0.2em;
+}
+.countdown div::before {
+  content: ' ';
+  width: 100%;
+  height: 40px;
+  background-color: #c888f3;
+  color: #fffefe;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 400;
+}
+.countdown div#day::before {
+  content: 'Days'
+}
+.countdown div#hour::before {
+  content: 'Hours'
+}
+.countdown div#min::before {
+  content: 'Minutes'
+}
+.countdown div#sec::before {
+  content: 'Seconds'
+}
