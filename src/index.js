@@ -15,11 +15,15 @@ const updateTime = () => {
   const s = Math.floor((((gap % days) % hours) % min) / sec);
 
   document.getElementById("day").innerText = d;
-  document.getElementById("hour").innerText = h;
-  document.getElementById("min").innerText = m;
-  document.getElementById("sec").innerText = s;
+  document.getElementById("hour").innerText = formatTime(h);
+  document.getElementById("min").innerText = formatTime(m);
+  document.getElementById("sec").innerText = formatTime(s);
 };
 
 setInterval(() => {
   updateTime();
 }, 1000);
+
+function formatTime(time) {
+  return time < 10 ? `0${time}` : time;
+}
