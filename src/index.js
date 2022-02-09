@@ -1,4 +1,4 @@
-const newYear = new Date("1 Jan, 2022 00:00:00").getTime();
+const newYear = new Date("1 Jan, 2023 00:00:00").getTime();
 
 const updateTime = () => {
   const today = new Date().getTime();
