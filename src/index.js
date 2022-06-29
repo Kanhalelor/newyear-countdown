@@ -1,5 +1,4 @@
 // new year countdown
-Permissions-Policy: interest-cohort=();
 const newYear = new Date("1 Jan, 2023 00:00:00").getTime();
 
 const updateTime = () => {
