@@ -1,5 +1,5 @@
 // new year countdown
-const newYear = new Date("1 Jan, 2023 00:00:00").getTime();
+const newYear = new Date("1 Jan, 2024 00:00:00").getTime();
 
 const updateTime = () => {
   const today = new Date().getTime();
